@@ -4,8 +4,9 @@ max_episode_steps: 5000
 actionRepeat_reward_mode: "tele"
 adaptive_action_reperate:
   compute_AAR: True
-  decay: True
+  decay: False
   decay_mode: "decay_on_success"
+  starting_AAR_percentage : 0.1
   decay_param: 
     success_threshold: 10
     decay_portion: 0.1
