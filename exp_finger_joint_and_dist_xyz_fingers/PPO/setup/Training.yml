@@ -1,0 +1,41 @@
+# https://medium.com/aureliantactics/ppo-hyperparameters-and-ranges-6fc2d29bccbe
+# https://stable-baselines.readthedocs.io/en/master/modules/ppo2.html
+
+training_description: ""
+adaptive_action_reperate: None 
+
+obs_mode: "finger_joint_and_dist_xyz"
+action_mode: "jointControl"
+adaptive_task_parameter_flag: False
+
+env_max_step: 1008 #n_steps
+
+batch_size: 64
+feature_extractionLayers: 
+  layers: [64,64]
+
+DenseLayer: 
+  layers: [64]
+ 
+
+n_epoch: 10
+
+lr: 1e-4
+
+discount: 0.99 #Gamma
+lam: 0.95 #0.9 to 1
+horizon: 2048
+
+enable_gae: True
+
+
+ent_coef: 0.01 #0 to 0.01
+
+vf_coef: 0.5 #0.5, 1
+
+max_grad_norm: 0.5
+
+cliprange: 0.1 # 0.1, 0.2, 0.3
+
+cliprange_vf: None
+
